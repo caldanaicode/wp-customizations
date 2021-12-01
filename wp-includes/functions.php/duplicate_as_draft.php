@@ -32,6 +32,7 @@ function duplicate_as_draft() {
 		
 		unset($data['ID']);
 		$data['post_status'] = 'draft';
+		$data['post_name'] .= '-backup';
 		$new_id = wp_insert_post($data);
 		
 		$taxonomies = get_object_taxonomies($post->post_type);
