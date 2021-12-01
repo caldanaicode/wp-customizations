@@ -1,8 +1,11 @@
+<?php
+
 /**
  * Enables post/page duplication as a draft.
  *
  * If a WordPress update causes the loss of this feature, it should be easy to add it back in.
- * Simply append all of this code to the end of the functions.php located in the wp-includes folder, and save it.
+ * Simply append all of the code from lines 13-80 to the end of the functions.php located in the
+ * wp-includes folder, and save it.
  *
  * Adapted from code originally provided courtesy of Misha Rudrastyh
  * found at https://www.hostinger.com/tutorials/how-to-duplicate-wordpress-page-or-post#Duplicating_WordPress_Page_or_Post_Without_Plugins
@@ -75,3 +78,5 @@ function duplicate_as_draft() {
  
  add_filter('post_row_actions', 'duplicate_link', 10, 2);
  add_filter('page_row_actions', 'duplicate_link', 10, 2);
+
+?>
